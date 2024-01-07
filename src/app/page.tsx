@@ -1,113 +1,53 @@
-import Image from 'next/image'
+import Menu from "@/components/Menu";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <>
+      <main className="flex h-screen w-full font-['Poppins'] md:flex-row flex-col-reverse md:justify-normal justify-end">
+        <div className="md:basis-1/2 bg-[#222831] md:h-full h-[-webkit-fill-available] flex flex-col md:justify-center justify-start md:ps-14 ps-4 md:pe-0 pe-4 md:pt-0 pt-10">
+          <header>
+            <h1 className="md:text-6xl text-4xl text-[#eeeeee] font-bold">HI THERE!</h1>
+            <h1 className="md:text-7xl text-5xl text-[#eeeeee] font-bold">{"I'M "}<span className="text-[#222831] text-stroke-white">RIDHO</span></h1>
+          </header>
+          <p className="text-[#393E46] bg-[#eeeeee] w-fit p-2 md:text-xl text-base font-bold">Frontend Web Developer/ Machine Learning Developer</p>
+          <p className="md:w-[560px] md:text-base text-sm text-[#eeeeee] font-normal text-justify my-4">
+            Frontend Web Development and Machine Learning Development are two key areas in software development. Frontend Web Development uses React JS, Tailwind CSS and Next JS. Machine Learning Development using Scikit-Learn, Tensorflow and Pytorch.
+          </p>
+          <Link href={"/about"} className="w-[160px] h-[40px] text-base grid place-items-center rounded-full bg-[#eeeeee] text-[#222831] font-bold hover:-translate-y-2 duration-500 hover:shadow-lg hover:shadow-neutral-500">More About Me</Link>
         </div>
-      </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+        <div className="md:basis-1/2 md:h-full h-[150px] bg-[#393E46] grid place-items-center md:py-0 py-4">
+          <svg xmlns="http://www.w3.org/2000/svg" className="md:w-[325px] w-28 aspect-square mri-rotate" viewBox="0 0 325 315" fill="none">
+            <mask id="path-1-inside-1_753_199" fill="#eeeeee">
+              <path d="M0 315V0H54.5C163 0 163 119.5 54.5 159.5L168 244L268.5 159.5H325V315H268.5V230L168 315L54.5 230V315H0Z"/>
+              <path d="M194.311 22.94V61H189.306V32.62L176.656 61H173.136L160.431 32.565V61H155.426V22.94H160.816L174.896 54.4L188.976 22.94H194.311Z"/>
+              <path d="M222.984 61L213.854 45.325H207.804V61H202.799V22.665H215.174C218.071 22.665 220.509 23.16 222.489 24.15C224.506 25.14 226.009 26.4783 226.999 28.165C227.989 29.8517 228.484 31.7767 228.484 33.94C228.484 36.58 227.714 38.9083 226.174 40.925C224.671 42.9417 222.398 44.28 219.354 44.94L228.979 61H222.984ZM207.804 41.31H215.174C217.888 41.31 219.923 40.65 221.279 39.33C222.636 37.9733 223.314 36.1767 223.314 33.94C223.314 31.6667 222.636 29.9067 221.279 28.66C219.959 27.4133 217.924 26.79 215.174 26.79H207.804V41.31Z"/>
+              <path d="M241.266 22.665V61H236.261V22.665H241.266Z"/>
+              <path d="M260.467 61.495C258.157 61.495 256.085 61.11 254.252 60.34C252.418 59.5333 250.97 58.4333 249.907 57.04C248.843 55.61 248.257 53.9783 248.147 52.145H253.317C253.463 53.6483 254.16 54.8767 255.407 55.83C256.69 56.7833 258.358 57.26 260.412 57.26C262.318 57.26 263.822 56.8383 264.922 55.995C266.022 55.1517 266.572 54.0883 266.572 52.805C266.572 51.485 265.985 50.5133 264.812 49.89C263.638 49.23 261.823 48.5883 259.367 47.965C257.13 47.3783 255.297 46.7917 253.867 46.205C252.473 45.5817 251.263 44.6833 250.237 43.51C249.247 42.3 248.752 40.7233 248.752 38.78C248.752 37.24 249.21 35.8283 250.127 34.545C251.043 33.2617 252.345 32.2533 254.032 31.52C255.718 30.75 257.643 30.365 259.807 30.365C263.143 30.365 265.838 31.2083 267.892 32.895C269.945 34.5817 271.045 36.8917 271.192 39.825H266.187C266.077 38.2483 265.435 36.9833 264.262 36.03C263.125 35.0767 261.585 34.6 259.642 34.6C257.845 34.6 256.415 34.985 255.352 35.755C254.288 36.525 253.757 37.5333 253.757 38.78C253.757 39.77 254.068 40.595 254.692 41.255C255.352 41.8783 256.158 42.3917 257.112 42.795C258.102 43.1617 259.458 43.5833 261.182 44.06C263.345 44.6467 265.105 45.2333 266.462 45.82C267.818 46.37 268.973 47.2133 269.927 48.35C270.917 49.4867 271.43 50.9717 271.467 52.805C271.467 54.455 271.008 55.94 270.092 57.26C269.175 58.58 267.873 59.625 266.187 60.395C264.537 61.1283 262.63 61.495 260.467 61.495Z"/>
+              <path d="M276.662 45.82C276.662 42.74 277.285 40.045 278.532 37.735C279.779 35.3883 281.484 33.5733 283.647 32.29C285.847 31.0067 288.304 30.365 291.017 30.365C293.364 30.365 295.545 30.915 297.562 32.015C299.579 33.0783 301.119 34.49 302.182 36.25V20.3H307.242V61H302.182V55.335C301.192 57.1317 299.725 58.6167 297.782 59.79C295.839 60.9267 293.565 61.495 290.962 61.495C288.285 61.495 285.847 60.835 283.647 59.515C281.484 58.195 279.779 56.3433 278.532 53.96C277.285 51.5767 276.662 48.8633 276.662 45.82ZM302.182 45.875C302.182 43.6017 301.724 41.6217 300.807 39.935C299.89 38.2483 298.644 36.965 297.067 36.085C295.527 35.1683 293.822 34.71 291.952 34.71C290.082 34.71 288.377 35.15 286.837 36.03C285.297 36.91 284.069 38.1933 283.152 39.88C282.235 41.5667 281.777 43.5467 281.777 45.82C281.777 48.13 282.235 50.1467 283.152 51.87C284.069 53.5567 285.297 54.8583 286.837 55.775C288.377 56.655 290.082 57.095 291.952 57.095C293.822 57.095 295.527 56.655 297.067 55.775C298.644 54.8583 299.89 53.5567 300.807 51.87C301.724 50.1467 302.182 48.1483 302.182 45.875Z"/>
+              <path d="M318.285 25.965C317.332 25.965 316.525 25.635 315.865 24.975C315.205 24.315 314.875 23.5083 314.875 22.555C314.875 21.6017 315.205 20.795 315.865 20.135C316.525 19.475 317.332 19.145 318.285 19.145C319.202 19.145 319.972 19.475 320.595 20.135C321.255 20.795 321.585 21.6017 321.585 22.555C321.585 23.5083 321.255 24.315 320.595 24.975C319.972 25.635 319.202 25.965 318.285 25.965ZM320.705 30.86V61H315.7V30.86H320.705Z"/>
+              <path d="M325 108C325 121.807 313.807 133 300 133C286.193 133 275 121.807 275 108C275 94.1929 286.193 83 300 83C313.807 83 325 94.1929 325 108Z"/>
+            </mask>
+            <path d="M0 315V0H54.5C163 0 163 119.5 54.5 159.5L168 244L268.5 159.5H325V315H268.5V230L168 315L54.5 230V315H0Z" fill="#eeeeee"/>
+            <path d="M194.311 22.94V61H189.306V32.62L176.656 61H173.136L160.431 32.565V61H155.426V22.94H160.816L174.896 54.4L188.976 22.94H194.311Z" fill="#222831"/>
+            <path d="M222.984 61L213.854 45.325H207.804V61H202.799V22.665H215.174C218.071 22.665 220.509 23.16 222.489 24.15C224.506 25.14 226.009 26.4783 226.999 28.165C227.989 29.8517 228.484 31.7767 228.484 33.94C228.484 36.58 227.714 38.9083 226.174 40.925C224.671 42.9417 222.398 44.28 219.354 44.94L228.979 61H222.984ZM207.804 41.31H215.174C217.888 41.31 219.923 40.65 221.279 39.33C222.636 37.9733 223.314 36.1767 223.314 33.94C223.314 31.6667 222.636 29.9067 221.279 28.66C219.959 27.4133 217.924 26.79 215.174 26.79H207.804V41.31Z" fill="#222831"/>
+            <path d="M241.266 22.665V61H236.261V22.665H241.266Z" fill="#222831"/>
+            <path d="M260.467 61.495C258.157 61.495 256.085 61.11 254.252 60.34C252.418 59.5333 250.97 58.4333 249.907 57.04C248.843 55.61 248.257 53.9783 248.147 52.145H253.317C253.463 53.6483 254.16 54.8767 255.407 55.83C256.69 56.7833 258.358 57.26 260.412 57.26C262.318 57.26 263.822 56.8383 264.922 55.995C266.022 55.1517 266.572 54.0883 266.572 52.805C266.572 51.485 265.985 50.5133 264.812 49.89C263.638 49.23 261.823 48.5883 259.367 47.965C257.13 47.3783 255.297 46.7917 253.867 46.205C252.473 45.5817 251.263 44.6833 250.237 43.51C249.247 42.3 248.752 40.7233 248.752 38.78C248.752 37.24 249.21 35.8283 250.127 34.545C251.043 33.2617 252.345 32.2533 254.032 31.52C255.718 30.75 257.643 30.365 259.807 30.365C263.143 30.365 265.838 31.2083 267.892 32.895C269.945 34.5817 271.045 36.8917 271.192 39.825H266.187C266.077 38.2483 265.435 36.9833 264.262 36.03C263.125 35.0767 261.585 34.6 259.642 34.6C257.845 34.6 256.415 34.985 255.352 35.755C254.288 36.525 253.757 37.5333 253.757 38.78C253.757 39.77 254.068 40.595 254.692 41.255C255.352 41.8783 256.158 42.3917 257.112 42.795C258.102 43.1617 259.458 43.5833 261.182 44.06C263.345 44.6467 265.105 45.2333 266.462 45.82C267.818 46.37 268.973 47.2133 269.927 48.35C270.917 49.4867 271.43 50.9717 271.467 52.805C271.467 54.455 271.008 55.94 270.092 57.26C269.175 58.58 267.873 59.625 266.187 60.395C264.537 61.1283 262.63 61.495 260.467 61.495Z" fill="#222831"/>
+            <path d="M276.662 45.82C276.662 42.74 277.285 40.045 278.532 37.735C279.779 35.3883 281.484 33.5733 283.647 32.29C285.847 31.0067 288.304 30.365 291.017 30.365C293.364 30.365 295.545 30.915 297.562 32.015C299.579 33.0783 301.119 34.49 302.182 36.25V20.3H307.242V61H302.182V55.335C301.192 57.1317 299.725 58.6167 297.782 59.79C295.839 60.9267 293.565 61.495 290.962 61.495C288.285 61.495 285.847 60.835 283.647 59.515C281.484 58.195 279.779 56.3433 278.532 53.96C277.285 51.5767 276.662 48.8633 276.662 45.82ZM302.182 45.875C302.182 43.6017 301.724 41.6217 300.807 39.935C299.89 38.2483 298.644 36.965 297.067 36.085C295.527 35.1683 293.822 34.71 291.952 34.71C290.082 34.71 288.377 35.15 286.837 36.03C285.297 36.91 284.069 38.1933 283.152 39.88C282.235 41.5667 281.777 43.5467 281.777 45.82C281.777 48.13 282.235 50.1467 283.152 51.87C284.069 53.5567 285.297 54.8583 286.837 55.775C288.377 56.655 290.082 57.095 291.952 57.095C293.822 57.095 295.527 56.655 297.067 55.775C298.644 54.8583 299.89 53.5567 300.807 51.87C301.724 50.1467 302.182 48.1483 302.182 45.875Z" fill="#222831"/>
+            <path d="M318.285 25.965C317.332 25.965 316.525 25.635 315.865 24.975C315.205 24.315 314.875 23.5083 314.875 22.555C314.875 21.6017 315.205 20.795 315.865 20.135C316.525 19.475 317.332 19.145 318.285 19.145C319.202 19.145 319.972 19.475 320.595 20.135C321.255 20.795 321.585 21.6017 321.585 22.555C321.585 23.5083 321.255 24.315 320.595 24.975C319.972 25.635 319.202 25.965 318.285 25.965ZM320.705 30.86V61H315.7V30.86H320.705Z" fill="#222831"/>
+            <path d="M325 108C325 121.807 313.807 133 300 133C286.193 133 275 121.807 275 108C275 94.1929 286.193 83 300 83C313.807 83 325 94.1929 325 108Z" fill="#eeeeee"/>
+            <path d="M0 315V0H54.5C163 0 163 119.5 54.5 159.5L168 244L268.5 159.5H325V315H268.5V230L168 315L54.5 230V315H0Z" stroke="black" strokeWidth="2" mask="url(#path-1-inside-1_753_199)"/>
+            <path d="M194.311 22.94V61H189.306V32.62L176.656 61H173.136L160.431 32.565V61H155.426V22.94H160.816L174.896 54.4L188.976 22.94H194.311Z" stroke="black" strokeWidth="2" mask="url(#path-1-inside-1_753_199)"/>
+            <path d="M222.984 61L213.854 45.325H207.804V61H202.799V22.665H215.174C218.071 22.665 220.509 23.16 222.489 24.15C224.506 25.14 226.009 26.4783 226.999 28.165C227.989 29.8517 228.484 31.7767 228.484 33.94C228.484 36.58 227.714 38.9083 226.174 40.925C224.671 42.9417 222.398 44.28 219.354 44.94L228.979 61H222.984ZM207.804 41.31H215.174C217.888 41.31 219.923 40.65 221.279 39.33C222.636 37.9733 223.314 36.1767 223.314 33.94C223.314 31.6667 222.636 29.9067 221.279 28.66C219.959 27.4133 217.924 26.79 215.174 26.79H207.804V41.31Z" stroke="black" strokeWidth="2" mask="url(#path-1-inside-1_753_199)"/>
+            <path d="M241.266 22.665V61H236.261V22.665H241.266Z" stroke="black" strokeWidth="2" mask="url(#path-1-inside-1_753_199)"/>
+            <path d="M260.467 61.495C258.157 61.495 256.085 61.11 254.252 60.34C252.418 59.5333 250.97 58.4333 249.907 57.04C248.843 55.61 248.257 53.9783 248.147 52.145H253.317C253.463 53.6483 254.16 54.8767 255.407 55.83C256.69 56.7833 258.358 57.26 260.412 57.26C262.318 57.26 263.822 56.8383 264.922 55.995C266.022 55.1517 266.572 54.0883 266.572 52.805C266.572 51.485 265.985 50.5133 264.812 49.89C263.638 49.23 261.823 48.5883 259.367 47.965C257.13 47.3783 255.297 46.7917 253.867 46.205C252.473 45.5817 251.263 44.6833 250.237 43.51C249.247 42.3 248.752 40.7233 248.752 38.78C248.752 37.24 249.21 35.8283 250.127 34.545C251.043 33.2617 252.345 32.2533 254.032 31.52C255.718 30.75 257.643 30.365 259.807 30.365C263.143 30.365 265.838 31.2083 267.892 32.895C269.945 34.5817 271.045 36.8917 271.192 39.825H266.187C266.077 38.2483 265.435 36.9833 264.262 36.03C263.125 35.0767 261.585 34.6 259.642 34.6C257.845 34.6 256.415 34.985 255.352 35.755C254.288 36.525 253.757 37.5333 253.757 38.78C253.757 39.77 254.068 40.595 254.692 41.255C255.352 41.8783 256.158 42.3917 257.112 42.795C258.102 43.1617 259.458 43.5833 261.182 44.06C263.345 44.6467 265.105 45.2333 266.462 45.82C267.818 46.37 268.973 47.2133 269.927 48.35C270.917 49.4867 271.43 50.9717 271.467 52.805C271.467 54.455 271.008 55.94 270.092 57.26C269.175 58.58 267.873 59.625 266.187 60.395C264.537 61.1283 262.63 61.495 260.467 61.495Z" stroke="black" strokeWidth="2" mask="url(#path-1-inside-1_753_199)"/>
+            <path d="M276.662 45.82C276.662 42.74 277.285 40.045 278.532 37.735C279.779 35.3883 281.484 33.5733 283.647 32.29C285.847 31.0067 288.304 30.365 291.017 30.365C293.364 30.365 295.545 30.915 297.562 32.015C299.579 33.0783 301.119 34.49 302.182 36.25V20.3H307.242V61H302.182V55.335C301.192 57.1317 299.725 58.6167 297.782 59.79C295.839 60.9267 293.565 61.495 290.962 61.495C288.285 61.495 285.847 60.835 283.647 59.515C281.484 58.195 279.779 56.3433 278.532 53.96C277.285 51.5767 276.662 48.8633 276.662 45.82ZM302.182 45.875C302.182 43.6017 301.724 41.6217 300.807 39.935C299.89 38.2483 298.644 36.965 297.067 36.085C295.527 35.1683 293.822 34.71 291.952 34.71C290.082 34.71 288.377 35.15 286.837 36.03C285.297 36.91 284.069 38.1933 283.152 39.88C282.235 41.5667 281.777 43.5467 281.777 45.82C281.777 48.13 282.235 50.1467 283.152 51.87C284.069 53.5567 285.297 54.8583 286.837 55.775C288.377 56.655 290.082 57.095 291.952 57.095C293.822 57.095 295.527 56.655 297.067 55.775C298.644 54.8583 299.89 53.5567 300.807 51.87C301.724 50.1467 302.182 48.1483 302.182 45.875Z" stroke="black" strokeWidth="2" mask="url(#path-1-inside-1_753_199)"/>
+            <path d="M318.285 25.965C317.332 25.965 316.525 25.635 315.865 24.975C315.205 24.315 314.875 23.5083 314.875 22.555C314.875 21.6017 315.205 20.795 315.865 20.135C316.525 19.475 317.332 19.145 318.285 19.145C319.202 19.145 319.972 19.475 320.595 20.135C321.255 20.795 321.585 21.6017 321.585 22.555C321.585 23.5083 321.255 24.315 320.595 24.975C319.972 25.635 319.202 25.965 318.285 25.965ZM320.705 30.86V61H315.7V30.86H320.705Z" stroke="black" strokeWidth="2" mask="url(#path-1-inside-1_753_199)"/>
+            <path d="M325 108C325 121.807 313.807 133 300 133C286.193 133 275 121.807 275 108C275 94.1929 286.193 83 300 83C313.807 83 325 94.1929 325 108Z" stroke="black" strokeWidth="2" mask="url(#path-1-inside-1_753_199)"/>
+          </svg>
+        </div>
+        <Menu />
+      </main>
+    </>
   )
 }
