@@ -52,7 +52,7 @@ export default function SlideExperience({data}:{data: experience[]}){
                                 <div className="mt-4">
                                     <ul className="pl-4">
                                         {
-                                            a["summary"].split(",").map((a, i)=>(
+                                            a["summary"]?.split(",").map((a, i)=>(
                                                 <li key={i} className="list-disc text-sm font-light">{a}</li>
                                             ))
                                         }

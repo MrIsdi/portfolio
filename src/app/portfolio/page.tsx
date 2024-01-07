@@ -27,7 +27,7 @@ export default async function portfolio(){
                                 <a href={`${a["link"]}`} key={i} className='relative hover:scale-110 duration-500 ease-in-out transition-all bg-[#eeeeee] rounded-2xl'>
                                     <Image src={img} alt='Kode' className='rounded-t-2xl mb-4' />
                                     {
-                                        a["tech"].split(",").map((a,i)=>(
+                                        a["tech"]?.split(",").map((a,i)=>(
                                             <span key={i} className='text-sm font-light bg-[#393E46] mx-1 text-[#eee] py-1 px-2 rounded-md'>{a}</span>
                                         ))
                                     }
