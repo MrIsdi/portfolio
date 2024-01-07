@@ -24,7 +24,7 @@ export default async function portfolio(){
                     <section className='md:px-10 px-4 md:w-full w-screen grid md:grid-cols-4 grid-cols-2 gap-4 mb-16'>
                         {
                             data.map((a,i)=>(
-                                <a href={a["link"]} key={i} className='relative hover:scale-110 duration-500 ease-in-out transition-all bg-[#eeeeee] rounded-2xl'>
+                                <a href={`${a["link"]}`} key={i} className='relative hover:scale-110 duration-500 ease-in-out transition-all bg-[#eeeeee] rounded-2xl'>
                                     <Image src={img} alt='Kode' className='rounded-t-2xl mb-4' />
                                     {
                                         a["tech"].split(",").map((a,i)=>(
