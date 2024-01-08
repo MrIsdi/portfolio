@@ -22,7 +22,7 @@ export default function AddExperience(){
             "completeTime": completeTime,
             "summary": summary
         }
-        await axios.post("http://mrisdi.vercel.app/api/Experience", body)
+        await axios.post("https://mrisdi.vercel.app/api/Experience", body)
         .then((res)=>{
             console.log(res.data)
         })
