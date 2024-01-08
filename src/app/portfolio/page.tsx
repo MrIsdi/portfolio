@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 const prisma = new PrismaClient()
 
 async function getData(){
-    const res = await fetch("http://mrisdi.vercel.app/api/Portfolio")
+    const res = await fetch("https://mrisdi.vercel.app/api/Portfolio")
     // const res = await fetch("http://localhost:3000/api/Portfolio")
     return res.json()
 }

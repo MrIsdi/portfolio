@@ -14,13 +14,13 @@ export const metadata: Metadata = {
 }
 
 async function getCertification(){
-    const res = await fetch("http://mrisdi.vercel.app/api/Certification")
+    const res = await fetch("https://mrisdi.vercel.app/api/Certification")
     // const res = await fetch("http://localhost:3000/api/Portfolio")
     return res.json()
 }
 
 async function getExperience(){
-    const res = await fetch("http://mrisdi.vercel.app/api/Experience")
+    const res = await fetch("https://mrisdi.vercel.app/api/Experience")
     // const res = await fetch("http://localhost:3000/api/Portfolio")
     return res.json()
 }

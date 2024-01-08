@@ -22,8 +22,8 @@ export default function AddPortfolio(){
             "link": link,
             "tech":tech
         }
-        // await axios.post("https://mrisdi.vercel.app/api/Portfolio", body)
-        await axios.post("http://localhost:3000/api/Portfolio", body)
+        await axios.post("https://mrisdi.vercel.app/api/Portfolio", body)
+        // await axios.post("http://localhost:3000/api/Portfolio", body)
         .then((res)=>{
             console.log(res.data)
             router.push("/portfolio")
