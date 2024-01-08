@@ -20,7 +20,7 @@ export default function AddCertification(){
             "organizer": organizer,
             "completeTime": completeTime
         }
-        await axios.post("http://localhost:3000/api/Certification", body)
+        await axios.post("http://mrisdi.vercel.app/api/Certification", body)
         .then((res)=>{
             console.log(res.data)
         })
