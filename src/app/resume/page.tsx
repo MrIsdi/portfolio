@@ -13,9 +13,21 @@ export const metadata: Metadata = {
     description: 'Portfolio',
 }
 
+async function getCertification(){
+    const res = await fetch("http://mrisdi.vercel.app/api/Certification")
+    // const res = await fetch("http://localhost:3000/api/Portfolio")
+    return res.json()
+}
+
+async function getExperience(){
+    const res = await fetch("http://mrisdi.vercel.app/api/Experience")
+    // const res = await fetch("http://localhost:3000/api/Portfolio")
+    return res.json()
+}
+
 export default async function resume(){
-    const certication = await prisma.certification.findMany()
-    const experience = await prisma.experience.findMany() 
+    const certication = await getCertification()
+    const experience = await getExperience()
     return(
         <>
             <Sidebar />

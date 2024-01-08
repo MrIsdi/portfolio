@@ -2,7 +2,7 @@
 import axios from "axios";
 import type { Metadata } from "next"
 import Link from "next/link"
-import { redirect } from "next/navigation";
+import { useRouter } from "next/navigation";
 import React, { useState } from "react"
 
 const metadata: Metadata = {
@@ -14,6 +14,7 @@ export default function AddPortfolio(){
     const [name, setName] = useState("")
     const [link, setLink] = useState("")
     const [tech, setTech] = useState("")
+    const router = useRouter()
     const handleSubmit = async (e: React.SyntheticEvent) =>{
         e.preventDefault()
         const body = { 
@@ -21,9 +22,11 @@ export default function AddPortfolio(){
             "link": link,
             "tech":tech
         }
-        await axios.post("https://mrisdi.vercel.app/api/Portfolio", body)
+        // await axios.post("https://mrisdi.vercel.app/api/Portfolio", body)
+        await axios.post("http://localhost:3000/api/Portfolio", body)
         .then((res)=>{
             console.log(res.data)
+            router.push("/portfolio")
         })
         .catch((er)=>{
             console.log(er)

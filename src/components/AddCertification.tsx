@@ -3,6 +3,7 @@ import axios from "axios";
 import type { Metadata } from "next"
 import Link from "next/link"
 import React, { useState } from "react"
+import { useRouter } from "next/navigation";
 
 const metadata: Metadata = {
     description: "Portfolio",
@@ -13,6 +14,7 @@ export default function AddCertification(){
     const [name, setName] = useState("")
     const [organizer, setOrganizer] = useState("")
     const [completeTime, setCompleteTime] = useState("")
+    const router = useRouter()
     const handleSubmit = async (e: React.SyntheticEvent) =>{
         e.preventDefault()
         const body = { 
@@ -23,6 +25,7 @@ export default function AddCertification(){
         await axios.post("https://mrisdi.vercel.app/api/Certification", body)
         .then((res)=>{
             console.log(res.data)
+            router.push("/resume")
         })
         .catch((er)=>{
             console.log(er)
